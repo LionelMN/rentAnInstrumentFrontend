@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "rentAnInstrumentFrontend"
+    }
+  },
+  "defaultProject": "rentAnInstrumentFrontend",
+  "cli": {
+    "analytics": false
+  }
 }
