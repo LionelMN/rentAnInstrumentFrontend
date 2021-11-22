@@ -6,8 +6,9 @@
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/">Link 1</a>
-      <a mat-list-item routerLink="/">Link 2</a>
+      <a mat-list-item routerLink="/dashboard">Link 2</a>
       <a mat-list-item routerLink="/">Link 3</a>
+      <mat-slide-toggle class="slide-toggle_nav-list" color="accent" (change)="onDarkModeSwitched($event)"> Dark Mode</mat-slide-toggle>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -20,11 +21,9 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>
-        <mat-slide-toggle color="accent" (change)="onDarkModeSwitched($event)">Dark Mode</mat-slide-toggle>
-      </span>
+      <h1>Rent An Instrument</h1>
     </mat-toolbar>
     <!-- Add Content Here -->
-    <button mat-button color="accent">Botón</button>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
